@@ -2,13 +2,13 @@
 
 ## Description
 
-Use schemacrawler on docker environment :
+Use [schemacrawler](https://www.schemacrawler.com) on docker environment :
 
-* Deploy the entire ELK stack
-  * ElasticSearch for data storage
-  * Logstash agent daemon for process newly exported files
-  * Kibana for display beautifuls dashboards !
-* Launch the schemacrawler's command : `csv`
+* Deploy the entire ELK `7.9.2` stack
+  * [ElasticSearch](https://www.elastic.co/what-is/elasticsearch) for data storage
+  * [Logstash](https://www.elastic.co/logstash) agent daemon for process newly exported files
+  * [Kibana](https://www.elastic.co/kibana) for display beautifuls dashboards !
+* Launch the schemacrawler's command : [csv](https://github.com/adriens/schemacrawler-additional-command-lints-as-csv)
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Use schemacrawler on docker environment :
 
 ### Fantastic Elastic
 
-* Deploy the Elastic World (in case if we want the all stack on local environnement else use the `ek.yml` file)
+* Deploy the Elastic World (in case if we want the all stack on local environnement else use the `ek.yml` file, without Logstashs so)
 
 ```sh
 docker-compose --project-name schemacrawler-elk -f elk.yml up -d
@@ -37,14 +37,14 @@ d426d2f30ed7        docker.elastic.co/kibana/kibana:7.9.2                 "/usr/
 ```
 
 * After several minutes, we can testing if everything it's OK with :
-  * <http://localhost:9200> (elasticSearch)
+  * <http://localhost:9200> (elasticsearch)
   * <http://localhost:5601> (kibana)
 
 In your favorite internet browser.
 
 ### Logstash is watching you
 
-(Only in case of Logstash in 'stand-alone' mode)
+(Only in case of Logstash in '**s**tand-**a**lone' mode)
 
 * Update connection informations on config files under the `logstash-sa` folder
   
@@ -86,9 +86,11 @@ sh logstash-sa.sh
 sh schemacrawler.sh
 ```
 
+The docker image [mbarre/schemacrawler-additional-lints](https://hub.docker.com/r/mbarre/schemacrawler-additional-lints) is used to run schemacrawler everywhere !
+
 ## Usefuls links
 
-* <https://www.elastic.co/fr/what-is/elk-stack>
+* <https://www.elastic.co/what-is/elk-stack>
 * <https://github.com/mbarre/schemacrawler-additional-lints>
 * <https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>
 * <https://www.schemacrawler.com/>
