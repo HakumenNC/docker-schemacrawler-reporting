@@ -8,7 +8,7 @@ Use schemacrawler on docker environment :
   * ElasticSearch for data storage
   * Logstash agent daemon for process newly exported files
   * Kibana for display beautifuls dashboards !
-* Launch the schemacralwer's command : `csv`
+* Launch the schemacrawler's command : `csv`
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Use schemacrawler on docker environment :
 
 ### Fantastic Elastic
 
-* Deploy the Elastic World (in case if we want the all stack on local environnement else use the ek.yml file)
+* Deploy the Elastic World (in case if we want the all stack on local environnement else use the `ek.yml` file)
 
 ```sh
 docker-compose --project-name schemacrawler-elk -f elk.yml up -d
@@ -47,13 +47,14 @@ In your favorite internet browser.
 (Only in case of Logstash in 'stand-alone' mode)
 
 * Update connection informations on config files under the `logstash-sa` folder
-  * *config/logstash.yml* :
+  
+***config/logstash.yml* :**
 
 ```yml
 monitoring.elasticsearch.hosts: <elasticSearch url>
 ```
 
-  * *pipeline/logstash-\*.conf* (modify for each file) :
+***pipeline/logstash-\*.conf* (modify for each file) :**
 
 ```conf
 ...
@@ -73,6 +74,8 @@ sh logstash-sa.sh
 
 ### Let's analyze the database
 
+**We use the folder `exportcsv` for export/inject the .csv files**
+
 #### Run schemaCrawler
 
 * edit the `schemacrawler.sh` file for fill the connection informations of your database
@@ -82,3 +85,11 @@ sh logstash-sa.sh
 ```sh
 sh schemacrawler.sh
 ```
+
+## Usefuls links
+
+* <https://www.elastic.co/fr/what-is/elk-stack>
+* <https://github.com/mbarre/schemacrawler-additional-lints>
+* <https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>
+* <https://www.schemacrawler.com/>
+  * <https://github.com/schemacrawler/SchemaCrawler>
