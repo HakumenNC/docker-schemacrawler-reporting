@@ -1,13 +1,21 @@
 # docker-schemacrawler-reporting
 
+* [Description](#description)
+* [Prerequisites](#prerequisites)
+* [How to use](#how-to-use)
+  * [Fantastic Elastic](#fantastic-elastic)
+  * [Logstash is watching you](#logstash-is-watching-you)
+  * [Let's analyze the database](#lets-analyze-the-database)
+* [Usefuls links](#usefuls-links)
+
 ## Description
 
 Use [schemacrawler](https://www.schemacrawler.com) on docker environment :
 
-* Deploy the entire ELK `7.9.2` stack
-  * [ElasticSearch](https://www.elastic.co/what-is/elasticsearch) for data storage
-  * [Logstash](https://www.elastic.co/logstash) agent daemon for process newly exported files
-  * [Kibana](https://www.elastic.co/kibana) for display beautifuls dashboards !
+* Deploy the entire [ELK](https://www.elastic.co/what-is/elk-stack) `7.9.2` stack
+  * [**E**lasticSearch](https://www.elastic.co/what-is/elasticsearch) for data storage
+  * [**L**ogstash](https://www.elastic.co/logstash) agent daemon for process newly exported files
+  * [**K**ibana](https://www.elastic.co/kibana) for display beautifuls dashboards !
 * Launch the schemacrawler's command : [csv](https://github.com/adriens/schemacrawler-additional-command-lints-as-csv)
 
 ## Prerequisites
@@ -19,7 +27,7 @@ Use [schemacrawler](https://www.schemacrawler.com) on docker environment :
 
 ### Fantastic Elastic
 
-* Deploy the Elastic World (in case if we want the all stack on local environnement else use the `ek.yml` file, without Logstashs so)
+* Deploy the Elastic World (in case if we want the all stack on local environnement else use the `ek.yml` file, without Logstash so)
 
 ```sh
 docker-compose --project-name schemacrawler-elk -f elk.yml up -d
@@ -78,7 +86,7 @@ sh logstash-sa.sh
 
 #### Run schemaCrawler
 
-* edit the `schemacrawler.sh` file for fill the connection informations of your database
+* Edit the `schemacrawler.sh` file for fill the connection informations of your database
 
 * Run it !
 
