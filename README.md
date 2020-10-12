@@ -20,8 +20,11 @@ Use [schemacrawler](https://www.schemacrawler.com) on docker environment :
 
 ## Prerequisites
 
+* A database
+* What is [SchemaCrawler](https://www.schemacrawler.com/faq.html#whats-schemacrawler) ?
+* What is [ELK](https://www.elastic.co/what-is/elk-stack) ?
 * docker : <https://www.docker.com/get-started>
-* docker-compose : <https://docs.docker.com/compose/install/>
+  * docker-compose : <https://docs.docker.com/compose/install/>
 
 ## How to use
 
@@ -62,7 +65,7 @@ In your favorite internet browser.
 monitoring.elasticsearch.hosts: <elasticSearch url>
 ```
 
-***pipeline/logstash-\*.conf* (modify for each file) :**
+***pipeline/logstash-\*.conf*** modify for each file : (Based from [schemacrawler-additional-command-lints-as-csv](<https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>))
 
 ```conf
 ...
