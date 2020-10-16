@@ -1,12 +1,12 @@
 # docker-schemacrawler-reporting
 
-* [Description](#description)
-* [Prerequisites](#prerequisites)
-* [How to use](#--how-to-use)
+* [Description](#speech_balloon-description)
+* [Prerequisites](#books-prerequisites)
+* [How to use](#rocket-how-to-use)
   * [Fantastic Elastic](#fantastic-elastic)
   * [Logstash is watching you](#logstash-is-watching-you)
   * [Let's analyze the database](#lets-analyze-the-database)
-* [Usefuls links](#usefuls-links)
+* [Usefuls links](#link-usefuls-links)
 
 ## :speech_balloon: Description
 
@@ -59,13 +59,13 @@ In your favorite internet browser.
 
 * Update connection informations on config files under the `logstash-sa` folder
   
-***config/logstash.yml* :**
+**:page_with_curl: *config/logstash.yml* :**
 
 ```yml
 monitoring.elasticsearch.hosts: <elasticSearch url>
 ```
 
-***pipeline/logstash-\*.conf*** modify for each file : (Based from [schemacrawler-additional-command-lints-as-csv](<https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>))
+**:page_with_curl: *pipeline/logstash-\*.conf*** modify for each file : (Based from [schemacrawler-additional-command-lints-as-csv](<https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>))
 
 ```conf
 ...
