@@ -2,15 +2,15 @@
 
 * [Description](#description)
 * [Prerequisites](#prerequisites)
-* [How to use](#how-to-use)
+* [How to use](#--how-to-use)
   * [Fantastic Elastic](#fantastic-elastic)
   * [Logstash is watching you](#logstash-is-watching-you)
   * [Let's analyze the database](#lets-analyze-the-database)
 * [Usefuls links](#usefuls-links)
 
-## Description
+## :speech_balloon: Description
 
-Use [schemacrawler](https://www.schemacrawler.com) on docker environment :
+Use [schemacrawler](https://www.schemacrawler.com) on docker :whale: environment :
 
 * Deploy the entire [ELK](https://www.elastic.co/what-is/elk-stack) `7.9.2` stack
   * [**E**lasticSearch](https://www.elastic.co/what-is/elasticsearch) for data storage
@@ -18,7 +18,7 @@ Use [schemacrawler](https://www.schemacrawler.com) on docker environment :
   * [**K**ibana](https://www.elastic.co/kibana) for display beautifuls dashboards !
 * Launch the schemacrawler's command : [csv](https://github.com/adriens/schemacrawler-additional-command-lints-as-csv)
 
-## Prerequisites
+## :books: Prerequisites
 
 * A database
 * What is [SchemaCrawler](https://www.schemacrawler.com/faq.html#whats-schemacrawler) ?
@@ -26,7 +26,7 @@ Use [schemacrawler](https://www.schemacrawler.com) on docker environment :
 * docker : <https://www.docker.com/get-started>
   * docker-compose : <https://docs.docker.com/compose/install/>
 
-## How to use
+## :rocket: How to use
 
 ### Fantastic Elastic
 
@@ -36,7 +36,7 @@ Use [schemacrawler](https://www.schemacrawler.com) on docker environment :
 docker-compose --project-name schemacrawler-elk -f elk.yml up -d
 ```
 
-* ...And that's all !
+* ...And that's all :clap: !
 
 ```sh
 $ docker ps
@@ -47,7 +47,7 @@ d426d2f30ed7        docker.elastic.co/kibana/kibana:7.9.2                 "/usr/
 9b7106e5b1dd        docker.elastic.co/elasticsearch/elasticsearch:7.9.2   "/tini -- /usr/local…"   3 days ago          Up 41 minutes       0.0.0.0:9200->9200/tcp, 9300/tcp   elasticsearch
 ```
 
-* After several minutes, we can testing if everything it's OK with :
+* After several minutes, we can testing if everything it's OK :ok_hand: with :
   * <http://localhost:9200> (elasticsearch)
   * <http://localhost:5601> (kibana)
 
@@ -77,7 +77,7 @@ output {
 ...
 ```
 
-* Invoke and unleash the Logstash daemon
+* Invoke and unleash the Logstash daemon :imp:
 
 ```sh
 sh logstash-sa.sh
@@ -85,21 +85,21 @@ sh logstash-sa.sh
 
 ### Let's analyze the database
 
-**We use the folder `exportcsv` for export/inject the .csv files**
+**We use the folder `exportcsv` :file_folder: for export/inject the .csv files**
 
 #### Run schemaCrawler
 
 * Edit the `schemacrawler.sh` file for fill the connection informations of your database
 
-* Run it !
+* Run it :rocket: !
 
 ```sh
 sh schemacrawler.sh
 ```
 
-The docker image [mbarre/schemacrawler-additional-lints](https://hub.docker.com/r/mbarre/schemacrawler-additional-lints) is used to run schemacrawler everywhere !
+The docker image [mbarre/schemacrawler-additional-lints](https://hub.docker.com/r/mbarre/schemacrawler-additional-lints) is used to run schemacrawler everywhere or almost !
 
-## Usefuls links
+## :link: Usefuls links
 
 * <https://www.elastic.co/what-is/elk-stack>
 * <https://github.com/mbarre/schemacrawler-additional-lints>
