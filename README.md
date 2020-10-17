@@ -6,6 +6,7 @@
   * [Fantastic Elastic](#fantastic-elastic)
   * [Logstash is watching you](#logstash-is-watching-you)
   * [Let's analyze the database](#lets-analyze-the-database)
+* [Troubleshoots](#gun-Troubleshooting)
 * [Usefuls links](#link-usefuls-links)
 
 ## :speech_balloon: Description
@@ -98,6 +99,21 @@ sh schemacrawler.sh
 ```
 
 The docker image [mbarre/schemacrawler-additional-lints](https://hub.docker.com/r/mbarre/schemacrawler-additional-lints) is used to run schemacrawler everywhere or almost !
+
+## :gun: Troubleshooting
+
+... And avoid tears of blood :drop_of_blood:
+
+* Got this issue (personnally experimented on Windows 10 at home... And randomly hapenned)? Please see https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues
+
+```sh
+Unable to find image 'hello-world:latest' locally
+Pulling repository docker.io/library/hello-world
+C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error while pulling image: Get https://index.docker.io/v1/repositories/library/hello-world/images: dial tcp: lookup index.docker.io on 10.0.75.1:53: no such host.
+See 'C:\Program Files\Docker\Docker\Resources\bin\docker.exe run --help'.
+```
+
+And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network card directly...
 
 ## :link: Usefuls links
 
