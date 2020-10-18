@@ -1,5 +1,10 @@
 # docker-schemacrawler-reporting
 
+[![Schemacrawler](img/schemaCrawler.png)](https://www.schemacrawler.com)
+[![Schemacrawler](img/docker.png)](https://www.docker.com)
+[![Schemacrawler](img/dockercompose.png)](https://docs.docker.com/compose)
+[![Schemacrawler](img/elk.png)](https://www.elastic.co)
+
 * [Description](#speech_balloon-description)
 * [Prerequisites](#books-prerequisites)
 * [How to use](#rocket-how-to-use)
