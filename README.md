@@ -1,9 +1,9 @@
 # docker-schemacrawler-reporting
 
-[![Schemacrawler](img/schemaCrawler.png)](https://www.schemacrawler.com)
-[![Schemacrawler](img/docker.png)](https://www.docker.com)
-[![Schemacrawler](img/dockercompose.png)](https://docs.docker.com/compose)
-[![Schemacrawler](img/elk.png)](https://www.elastic.co)
+[![Schemacrawler](img/schemaCrawler.png)](https://www.schemacrawler.com "Schemacrawler")
+[![docker](img/docker.png)](https://www.docker.com "Docker")
+[![dockercompose](img/dockercompose.png)](https://docs.docker.com/compose "Docker compose")
+[![elk](img/elk.png)](https://www.elastic.co "ELK")
 
 * [Description](#speech_balloon-description)
 * [Prerequisites](#books-prerequisites)
