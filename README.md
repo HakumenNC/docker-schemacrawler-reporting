@@ -24,6 +24,16 @@ Use [schemacrawler](https://www.schemacrawler.com) on docker :whale: environment
   * [**K**ibana](https://www.elastic.co/kibana) for display beautifuls dashboards !
 * Launch the schemacrawler's command : [csv](https://github.com/adriens/schemacrawler-additional-command-lints-as-csv)
 
+News calculateds fields (in [ruby](https://www.ruby-lang.org/) :gem:) are added on logstash step :
+
+* [logstash-columns.conf](logstash/pipeline/logstash-columns.conf)
+  * `sclint-isRGPDColumn` : Is `true` if the column's remark (based on field `sclint-column-remarks`) contains "RGPD" string else `false`
+* [logstash-lints.conf](logstash/pipeline/logstash-lints.conf)
+  * `sclint-linterIdClassName` : Return the className of field `sclint-linterId`
+  * `sclint-linterIdPackageName` : Return the package's path of field `sclint-linterId`
+
+:bulb: Feel free to create PR or issues for any new ideas of calculateds fields !
+
 ## :books: Prerequisites
 
 * A database
