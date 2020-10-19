@@ -115,6 +115,23 @@ sh schemacrawler.sh
 
 The docker image [mbarre/schemacrawler-additional-lints](https://hub.docker.com/r/mbarre/schemacrawler-additional-lints) is used to run schemacrawler everywhere or almost !
 
+#### Kibana side story
+
+##### Create Index pattern
+
+* Go to `http://localhost:5601`
+* Reach the `Stack Management` via the side left menu
+* In `Index Patterns` page, click on `Create index pattern` button
+* Type `schemacrawler-*` as an index pattern name and click on `Next step`
+* Select `@timestamp` as Time field
+* Finally, click on `Create index pattern`
+
+You are now ready to see the data imported on the `Discover` page (In the side menu : Kibana/Discover)
+
+##### Beautifuls Dashboard incoming
+
+*Coming soon...* :wink:
+
 ## :gun: Troubleshooting
 
 ... And avoid tears of blood :drop_of_blood:
