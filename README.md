@@ -11,7 +11,12 @@
   * [Fantastic Elastic](#fantastic-elastic)
   * [Logstash is watching you](#logstash-is-watching-you)
   * [Let's analyze the database](#lets-analyze-the-database)
-* [Troubleshoots](#gun-Troubleshooting)
+    * [Run schemaCrawler](#run-schemaCrawler)
+  * [Jump in Kibana](#jump-in-Kibana)
+    * [Create Index pattern](#create-index-pattern)
+    * [Beautifuls Dashboards incoming](#beautifuls-dashboards-incoming)
+* [Troubleshooting](#gun-Troubleshooting)
+  * [No such host on pulling docker images](#no-such-host-on-pulling-docker-images)
 * [Usefuls links](#link-usefuls-links)
 
 ## :speech_balloon: Description
@@ -115,9 +120,9 @@ sh schemacrawler.sh
 
 The docker image [mbarre/schemacrawler-additional-lints](https://hub.docker.com/r/mbarre/schemacrawler-additional-lints) is used to run schemacrawler everywhere or almost !
 
-#### Kibana side story
+### Jump in Kibana
 
-##### Create Index pattern
+#### Create Index pattern
 
 * Go to `http://localhost:5601`
 * Reach the `Stack Management` via the side left menu
@@ -128,7 +133,7 @@ The docker image [mbarre/schemacrawler-additional-lints](https://hub.docker.com/
 
 You are now ready to see the data imported on the `Discover` page (In the side menu : Kibana/Discover)
 
-##### Beautifuls Dashboard incoming
+#### Beautifuls Dashboards incoming
 
 *Coming soon...* :wink:
 
@@ -136,7 +141,9 @@ You are now ready to see the data imported on the `Discover` page (In the side m
 
 ... And avoid tears of blood :drop_of_blood:
 
-* Got this issue (personnally experimented on Windows 10 at home... And randomly hapenned)? Please see https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues
+### No such host on pulling docker images
+
+Got this issue (personnally experimented on Windows 10 at home... And randomly hapenned)? Please see https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues
 
 ```sh
 Unable to find image 'hello-world:latest' locally
