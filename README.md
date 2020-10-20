@@ -5,6 +5,7 @@
 [![dockercompose](img/dockercompose.png)](https://docs.docker.com/compose "Docker compose")
 [![elk](img/elk.png)](https://www.elastic.co "ELK")
 
+* [Demo](#bar_chart-demo)
 * [Description](#speech_balloon-description)
 * [Prerequisites](#books-prerequisites)
 * [How to use](#rocket-how-to-use)
@@ -18,6 +19,10 @@
 * [Troubleshooting](#gun-Troubleshooting)
   * [No such host on pulling docker images](#no-such-host-on-pulling-docker-images)
 * [Usefuls links](#link-usefuls-links)
+
+## :bar_chart: Demo
+
+Some [Kibana Dashboards visuals](https://hakumennc.github.io/docker-schemacrawler-reporting/) produced on top of this project.
 
 ## :speech_balloon: Description
 
@@ -156,6 +161,7 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 
 ## :link: Usefuls links
 
+* [Dashboard demo](https://hakumennc.github.io/docker-schemacrawler-reporting/)
 * <https://www.elastic.co/what-is/elk-stack>
 * <https://github.com/mbarre/schemacrawler-additional-lints>
 * <https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>
