@@ -19,6 +19,10 @@
   * [No such host on pulling docker images](#no-such-host-on-pulling-docker-images)
 * [Usefuls links](#link-usefuls-links)
 
+## Démo
+
+Some [Kibana Dashboards visuals](https://hakumennc.github.io/docker-schemacrawler-reporting/) produced on top of this project.
+
 ## :speech_balloon: Description
 
 Use [schemacrawler](https://www.schemacrawler.com) on docker :whale: environment :
@@ -156,6 +160,7 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 
 ## :link: Usefuls links
 
+* [Dashboard demo](https://hakumennc.github.io/docker-schemacrawler-reporting/)
 * <https://www.elastic.co/what-is/elk-stack>
 * <https://github.com/mbarre/schemacrawler-additional-lints>
 * <https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>
