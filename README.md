@@ -176,7 +176,8 @@ You are now ready to see the data imported on the `Discover` page (In the side m
 
 #### Beautifuls Dashboards incoming
 
-*Coming soon...* :wink:
+It's creativity time! Kibana provide [Dashboard](https://www.elastic.co/guide/en/kibana/current/dashboard-create-new-dashboard.html) and [Canvas](https://www.elastic.co/fr/what-is/kibana-canvas) for visualisations.
+See some [examples](https://hakumennc.github.io/docker-schemacrawler-reporting/)
 
 ## :gun: Troubleshooting
 
