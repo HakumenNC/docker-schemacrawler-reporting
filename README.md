@@ -1,9 +1,9 @@
 # docker-schemacrawler-reporting
 
-[![Schemacrawler](img/schemaCrawler.png)](https://www.schemacrawler.com "Schemacrawler")
-[![docker](img/docker.png)](https://www.docker.com "Docker")
-[![dockercompose](img/dockercompose.png)](https://docs.docker.com/compose "Docker compose")
-[![elk](img/elk.png)](https://www.elastic.co "ELK")
+[![Schemacrawler](https://github.com/HakumenNC/logo-gallery/raw/main/img/schemacrawler/schemacrawler.png)](https://www.schemacrawler.com "Schemacrawler")
+[![docker](https://github.com/HakumenNC/logo-gallery/raw/main/img/docker/docker.png)](https://www.docker.com "Docker")
+[![dockercompose](https://github.com/HakumenNC/logo-gallery/raw/main/img/docker-compose/docker-compose.png)](https://docs.docker.com/compose "Docker compose")
+[![elk](https://github.com/HakumenNC/logo-gallery/raw/main/img/elk/elk.png)](https://www.elastic.co "ELK")
 
 * [Demo](#bar_chart-demo)
 * [Description](#speech_balloon-description)
