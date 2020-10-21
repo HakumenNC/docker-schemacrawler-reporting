@@ -27,7 +27,7 @@
 
 Some [Kibana Dashboards visuals](https://hakumennc.github.io/docker-schemacrawler-reporting/) produced on top of this project.
 
-<img src="img/dashboard-lints.PNG" alt="lints" title="lints" height="100" /> <img src="img/dashboard-rgpd.PNG" alt="lints" title="RGPD" height="100" />
+<img src="img/dashboard-lints.PNG" alt="lints" title="lints" height="100" /> <img src="img/dashboard-rgpd.PNG" alt="lints" title="RGPD" height="100" /> <img src="img/dashboard.png" alt="dashboard" title="dashboard" height="100" />
 
 ## :speech_balloon: Description
 
