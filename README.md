@@ -9,6 +9,7 @@
 * [Description](#speech_balloon-description)
 * [Prerequisites](#books-prerequisites)
   * [Installation](#installation)
+  * [Database sample](#database-sample)
   * [Extra documentation](#extra-documentation)
 * [How to use](#rocket-how-to-use)
   * [Get the project](#get-the-project)
@@ -73,7 +74,7 @@ $ docker-compose -v
 docker-compose version 1.27.4, build 40524192
 ```
 
-### Database
+### Database sample
 
 No database on hand? Don't panic, let's go [here](sampledb)
 
