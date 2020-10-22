@@ -73,6 +73,10 @@ $ docker-compose -v
 docker-compose version 1.27.4, build 40524192
 ```
 
+### Database
+
+No database on hand? Don't panic, let's go [here](sampledb)
+
 ### Extra documentation
 
 * What is [SchemaCrawler](https://www.schemacrawler.com/faq.html#whats-schemacrawler) ?
