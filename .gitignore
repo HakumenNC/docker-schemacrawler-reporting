@@ -1,2 +1,10 @@
 elasticsearch
-exportcsv
+exportcsv.idea
+.vagrant
+.idea/$CACHE_FILE$
+.idea/dictionaries
+.idea/docker-schemacrawler-reporting.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
