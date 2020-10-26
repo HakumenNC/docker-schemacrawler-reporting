@@ -1,13 +1,18 @@
 # docker-schemacrawler-reporting
 
-[![Schemacrawler](img/schemaCrawler.png)](https://www.schemacrawler.com "Schemacrawler")
-[![docker](img/docker.png)](https://www.docker.com "Docker")
-[![dockercompose](img/dockercompose.png)](https://docs.docker.com/compose "Docker compose")
-[![elk](img/elk.png)](https://www.elastic.co "ELK")
+[![Schemacrawler](https://github.com/HakumenNC/logo-gallery/raw/main/img/schemacrawler/schemacrawler.png)](https://www.schemacrawler.com "Schemacrawler")
+[![docker](https://github.com/HakumenNC/logo-gallery/raw/main/img/docker/docker.png)](https://www.docker.com "Docker")
+[![dockercompose](https://github.com/HakumenNC/logo-gallery/raw/main/img/docker-compose/docker-compose.png)](https://docs.docker.com/compose "Docker compose")
+[![elk](https://github.com/HakumenNC/logo-gallery/raw/main/img/elk/elk.png)](https://www.elastic.co "ELK")
 
+* [Demo](#bar_chart-demo)
 * [Description](#speech_balloon-description)
 * [Prerequisites](#books-prerequisites)
+  * [Installation](#installation)
+  * [Database sample](#database-sample)
+  * [Extra documentation](#extra-documentation)
 * [How to use](#rocket-how-to-use)
+  * [Get the project](#get-the-project)
   * [Fantastic Elastic](#fantastic-elastic)
   * [Logstash is watching you](#logstash-is-watching-you)
   * [Let's analyze the database](#lets-analyze-the-database)
@@ -18,6 +23,12 @@
 * [Troubleshooting](#gun-Troubleshooting)
   * [No such host on pulling docker images](#no-such-host-on-pulling-docker-images)
 * [Usefuls links](#link-usefuls-links)
+
+## :bar_chart: Demo
+
+Some [Kibana Dashboards visuals](https://hakumennc.github.io/docker-schemacrawler-reporting/) produced on top of this project.
+
+<img src="img/dashboard-lints.PNG" alt="lints" title="lints" height="100" /> <img src="img/dashboard-rgpd.PNG" alt="lints" title="RGPD" height="100" /> <img src="img/dashboard.png" alt="dashboard" title="dashboard" height="100" />
 
 ## :speech_balloon: Description
 
@@ -41,13 +52,48 @@ News calculateds fields (in [ruby](https://www.ruby-lang.org/) :gem:) are added 
 
 ## :books: Prerequisites
 
-* A database
-* What is [SchemaCrawler](https://www.schemacrawler.com/faq.html#whats-schemacrawler) ?
-* What is [ELK](https://www.elastic.co/what-is/elk-stack) ?
+### Installation
+
+* git : <https://git-scm.com/downloads>
 * docker : <https://www.docker.com/get-started>
   * docker-compose : <https://docs.docker.com/compose/install/>
+* Verification examples
+
+```sh
+$ git --version
+git version 2.23.0.windows.1
+```
+
+```sh
+$ docker -v
+Docker version 18.09.6, build c89750f8
+```
+
+```sh
+$ docker-compose -v
+docker-compose version 1.27.4, build 40524192
+```
+
+### Database sample
+
+No database on hand? Don't panic, let's go [here](sampledb)
+
+### Extra documentation
+
+* What is [SchemaCrawler](https://www.schemacrawler.com/faq.html#whats-schemacrawler) ?
+* What is [ELK](https://www.elastic.co/what-is/elk-stack) ?
 
 ## :rocket: How to use
+
+### Get the project
+
+```sh
+git clone https://github.com/HakumenNC/docker-schemacrawler-reporting.git
+```
+
+```sh
+cd docker-schemacrawler-reporting
+```
 
 ### Fantastic Elastic
 
@@ -135,7 +181,8 @@ You are now ready to see the data imported on the `Discover` page (In the side m
 
 #### Beautifuls Dashboards incoming
 
-*Coming soon...* :wink:
+It's creativity time! Kibana provide [Dashboard](https://www.elastic.co/guide/en/kibana/current/dashboard-create-new-dashboard.html) and [Canvas](https://www.elastic.co/fr/what-is/kibana-canvas) for visualisations.
+See some [examples](https://hakumennc.github.io/docker-schemacrawler-reporting/)
 
 ## :gun: Troubleshooting
 
@@ -156,6 +203,7 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 
 ## :link: Usefuls links
 
+* [Dashboard demo](https://hakumennc.github.io/docker-schemacrawler-reporting/)
 * <https://www.elastic.co/what-is/elk-stack>
 * <https://github.com/mbarre/schemacrawler-additional-lints>
 * <https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>
