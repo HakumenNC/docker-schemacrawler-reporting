@@ -12,9 +12,11 @@ docker run \
   --net=host \
   mbarre/schemacrawler-additional-lints //opt/schemacrawler/schemacrawler.sh \
   connect \
-    --server=postgresql \
-    --host=192.168.12.345 --port=5432 \
-    --database=myDatabase --user=myUser --password= \
+    --server=postgres \
+    --host=localhost \
+    --user=user \
+    --password=password \
+    --database=db \
     --info-level=maximum \
     --log-level=INFO \
     --command=csv \
