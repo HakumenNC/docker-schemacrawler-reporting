@@ -12,9 +12,11 @@ docker run \
   --net=host \
   mbarre/schemacrawler-additional-lints //opt/schemacrawler/schemacrawler.sh \
   connect \
-    --server=sqlite \
+    --server=postgres \
     --host=localhost \
-    --database=sc.db \
+    --user=user \
+    --password=password \
+    --database=db \
     --info-level=maximum \
     --log-level=INFO \
     --command=csv \
