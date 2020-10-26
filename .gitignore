@@ -1,5 +1,6 @@
 elasticsearch
-exportcsv.idea
+exportcsv
+.idea
 .vagrant
 .idea/$CACHE_FILE$
 .idea/dictionaries
