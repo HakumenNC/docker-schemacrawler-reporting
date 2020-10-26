@@ -20,6 +20,10 @@
   * [Jump in Kibana](#jump-in-Kibana)
     * [Create Index pattern](#create-index-pattern)
     * [Beautifuls Dashboards incoming](#beautifuls-dashboards-incoming)
+* [A ready-to-use environment with Vagrant](#A ready-to-use environment with Vagrant)
+)
+    * [Prerequisites](#Prerequisites)
+    * [Go!](#Go!)
 * [Troubleshooting](#gun-Troubleshooting)
   * [No such host on pulling docker images](#no-such-host-on-pulling-docker-images)
 * [Usefuls links](#link-usefuls-links)
@@ -183,6 +187,32 @@ You are now ready to see the data imported on the `Discover` page (In the side m
 
 It's creativity time! Kibana provide [Dashboard](https://www.elastic.co/guide/en/kibana/current/dashboard-create-new-dashboard.html) and [Canvas](https://www.elastic.co/fr/what-is/kibana-canvas) for visualisations.
 See some [examples](https://hakumennc.github.io/docker-schemacrawler-reporting/)
+
+## A ready-to-use environment with Vagrant
+
+Don't want to execute docker commands... but try all the stack quickly... This is the solution.
+
+Following tools are installed :
+* docker
+* docker-compose
+* portainer (localhost:9000)
+* elasticsearch (localhost:9200)
+* kibana (localhost:5601)
+* logstash
+* schemacrawler
+* postgresql and a demo database
+
+### Prerequisites
+
+* Vagrant
+
+### Go !
+
+* vagrant up
+* vagrant shh
+* sh schemacrawler.sh
+* see results in kibana !
+
 
 ## :gun: Troubleshooting
 
