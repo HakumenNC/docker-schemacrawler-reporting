@@ -11,7 +11,10 @@ docker-compose --version
 # Installation de ELK
 cd /vagrant
 docker-compose --project-name schemacrawler-elk -f elk.yml up -d
+sudo chown -R vagrant:vagrant elasticsearch
+sudo chown -R vagrant:vagrant exportcsv
 
+# Installation de la base de test Postgresql
 docker-compose -f sampledb/postgres.yml up -d
 
 # Installation de Portainer
