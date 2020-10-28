@@ -3,6 +3,7 @@
 [![Schemacrawler](https://github.com/HakumenNC/logo-gallery/raw/main/img/schemacrawler/schemacrawler.png)](https://www.schemacrawler.com "Schemacrawler")
 [![docker](https://github.com/HakumenNC/logo-gallery/raw/main/img/docker/docker.png)](https://www.docker.com "Docker")
 [![dockercompose](https://github.com/HakumenNC/logo-gallery/raw/main/img/docker-compose/docker-compose.png)](https://docs.docker.com/compose "Docker compose")
+[![Vagrant](https://github.com/HakumenNC/logo-gallery/raw/main/img/devops/vagrant/vagrant.png)](https://www.vagrantup.com/ "Vagrant")
 [![elk](https://github.com/HakumenNC/logo-gallery/raw/main/img/elk/elk.png)](https://www.elastic.co "ELK")
 
 * [Demo](#bar_chart-demo)
@@ -20,8 +21,7 @@
   * [Jump in Kibana](#jump-in-Kibana)
     * [Create Index pattern](#create-index-pattern)
     * [Beautifuls Dashboards incoming](#beautifuls-dashboards-incoming)
-* [A ready-to-use environment with Vagrant](#A ready-to-use environment with Vagrant)
-)
+* [A ready-to-use environment with Vagrant](#a-ready-to-use-environment-with-Vagrant)
     * [Prerequisites](#Prerequisites)
     * [Go!](#Go!)
 * [Troubleshooting](#gun-Troubleshooting)
@@ -126,7 +126,7 @@ In your favorite internet browser.
 
 ### Logstash is watching you
 
-(Only in case of Logstash in '**s**tand-**a**lone' mode)
+:stop_sign: Only in case of Logstash in '**s**tand-**a**lone' mode
 
 * Update connection informations on config files under the `logstash-sa` folder
   
@@ -188,11 +188,12 @@ You are now ready to see the data imported on the `Discover` page (In the side m
 It's creativity time! Kibana provide [Dashboard](https://www.elastic.co/guide/en/kibana/current/dashboard-create-new-dashboard.html) and [Canvas](https://www.elastic.co/fr/what-is/kibana-canvas) for visualisations.
 See some [examples](https://hakumennc.github.io/docker-schemacrawler-reporting/)
 
-## A ready-to-use environment with Vagrant
+## :computer: A ready-to-use environment with Vagrant
 
 Don't want to execute docker commands... but try all the stack quickly... This is the solution.
 
 Following tools are installed :
+
 * docker
 * docker-compose
 * portainer (localhost:9000)
@@ -204,15 +205,14 @@ Following tools are installed :
 
 ### Prerequisites
 
-* Vagrant
+* [Vagrant](https://www.vagrantup.com/downloads)
 
 ### Go !
 
 * vagrant up
-* vagrant shh
+* vagrant ssh
 * sh schemacrawler.sh
 * see results in kibana !
-
 
 ## :gun: Troubleshooting
 
@@ -239,3 +239,4 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 * <https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>
 * <https://www.schemacrawler.com/>
   * <https://github.com/schemacrawler/SchemaCrawler>
+* <https://www.vagrantup.com/intro/index>

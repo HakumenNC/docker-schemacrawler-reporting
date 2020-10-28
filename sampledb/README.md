@@ -2,6 +2,7 @@
 
 [![docker](https://github.com/HakumenNC/logo-gallery/raw/main/img/docker/docker.png)](https://www.docker.com "Docker")
 [![dockercompose](https://github.com/HakumenNC/logo-gallery/raw/main/img/docker-compose/docker-compose.png)](https://docs.docker.com/compose "Docker compose")
+[![postgresql](https://github.com/HakumenNC/logo-gallery/raw/main/img/database/postgresql/postgresql.png)](https://www.postgresql.org/ "Postgresql")
 
 ## :speech_balloon: Description
 
