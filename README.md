@@ -23,7 +23,7 @@
     * [Beautifuls Dashboards incoming](#beautifuls-dashboards-incoming)
 * [A ready-to-use environment with Vagrant](#computer-a-ready-to-use-environment-with-vagrant)
   * [Prerequisites](#Prerequisites)
-  * [Go!](#Go-!)
+  * [Go!](#go-!)
 * [Troubleshooting](#gun-Troubleshooting)
   * [No such host on pulling docker images](#no-such-host-on-pulling-docker-images)
 * [Usefuls links](#link-usefuls-links)
