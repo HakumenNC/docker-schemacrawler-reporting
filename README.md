@@ -237,7 +237,7 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 ## :point_right: Further with Schemacrawler
 
 * [Schemacrawler Lints with Github Actions on Dev.to](https://dev.to/sualeh/lint-your-database-schema-with-github-actions-workflows-57cg)
-* [Generate Database Diagrams With GitHub Actions Workflows](https://dev.to/sualeh/generate-database-diagrams-with-github-actions-workflows-4l96=)
+* [Generate Database Diagrams With GitHub Actions Workflows](https://dev.to/sualeh/generate-database-diagrams-with-github-actions-workflows-4l96)
 * [SchemaCrawler tutorials on Katacoda.](https://www.katacoda.com/schemacrawler)
 
 
