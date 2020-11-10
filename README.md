@@ -37,23 +37,12 @@ Some [Kibana Dashboards visuals](https://hakumennc.github.io/docker-schemacrawle
 
 ## :speech_balloon: Description
 
-Use [schemacrawler](https://www.schemacrawler.com) on docker :whale: environment :
-
-* Deploy the entire [ELK](https://www.elastic.co/what-is/elk-stack) `7.9.2` stack
+* Use [schemacrawler](https://www.schemacrawler.com) on docker :whale: environment.
+* Launch the schemacrawler's command [csv](https://github.com/adriens/schemacrawler-additional-command-lints-as-csv) trough `docker run`
+* Use and Deploy the entire [ELK](https://www.elastic.co/what-is/elk-stack) `7.9.2` stack to consume the exported csv
   * [ElasticSearch](https://www.elastic.co/what-is/elasticsearch) for data storage
   * [Logstash](https://www.elastic.co/logstash) agent daemon for process newly exported files
   * [Kibana](https://www.elastic.co/kibana) for display beautifuls dashboards !
-* Launch the schemacrawler's command : [csv](https://github.com/adriens/schemacrawler-additional-command-lints-as-csv)
-
-News calculateds fields (in [ruby](https://www.ruby-lang.org/) :gem:) are added on logstash step :
-
-| field | pipeline | description |
-| - | - | - |
-| `sclint-isRGPDColumn` | [logstash-columns.conf](logstash/pipeline/logstash-columns.conf) | Is `true` if the column's remark (based on field `sclint-column-remarks`) contains "RGPD" string else `false` |
-| `sclint-linterIdClassName` | [logstash-lints.conf](logstash/pipeline/logstash-lints.conf) | Return the className of field `sclint-linterId` |
-| `sclint-linterIdPackageName` | [logstash-lints.conf](logstash/pipeline/logstash-lints.conf) | Return the package's path of field `sclint-linterId` |
-
-:bulb: Feel free to create PR or issues for any new ideas of calculateds fields !
 
 ## :books: Prerequisites
 
@@ -80,7 +69,7 @@ docker-compose version 1.27.4, build 40524192
 
 ### Database sample
 
-No database on hand? Don't panic, let's go [here](sampledb)
+:bulb: No database on hand? Don't panic, let's go [here](sampledb)
 
 ### Extra documentation
 
@@ -101,13 +90,13 @@ cd docker-schemacrawler-reporting
 
 ### Fantastic Elastic
 
-* Deploy the Elastic World *(in case if we want the all stack on local environnement else use the `ek.yml` file, without Logstash so)*
+Deploy the Elastic World *(in case if we want the all stack on local environnement else use the `ek.yml` file, without Logstash so)*
 
 ```sh
 docker-compose --project-name schemacrawler-elk -f elk.yml up -d
 ```
 
-* ...And that's all :clap: !
+...And that's all :clap: !
 
 ```console
 $ docker ps
@@ -118,39 +107,24 @@ d426d2f30ed7        docker.elastic.co/kibana/kibana:7.9.2                 "/usr/
 9b7106e5b1dd        docker.elastic.co/elasticsearch/elasticsearch:7.9.2   "/tini -- /usr/local…"   3 days ago          Up 41 minutes       0.0.0.0:9200->9200/tcp, 9300/tcp   elasticsearch
 ```
 
-* After several minutes, we can testing if everything it's OK with :
-  * <http://localhost:9200> (elasticsearch)
-  * <http://localhost:5601> (kibana)
+After several minutes, we can testing if everything it's OK with :
+
+* <http://localhost:9200> (elasticsearch)
+* <http://localhost:5601> (kibana)
 
 ### Logstash is watching you
 
-:stop_sign: Only in case of Logstash in '**s**tand-**a**lone' mode
+If you run logstash separately, take a look for the configuration [here](logstash.md)
 
-* Update connection informations on config files under the `logstash-sa` folder
-  
-**:page_with_curl: *config/logstash.yml* :**
+News calculateds fields (in [ruby](https://www.ruby-lang.org/) :gem:) are added on logstash step :
 
-```yml
-monitoring.elasticsearch.hosts: <elasticSearch url>
-```
+| field | pipeline | description |
+| - | - | - |
+| `sclint-isRGPDColumn` | [logstash-columns.conf](logstash/pipeline/logstash-columns.conf) | Is `true` if the column's remark (based on field `sclint-column-remarks`) contains "RGPD" string else `false` |
+| `sclint-linterIdClassName` | [logstash-lints.conf](logstash/pipeline/logstash-lints.conf) | Return the className of field `sclint-linterId` |
+| `sclint-linterIdPackageName` | [logstash-lints.conf](logstash/pipeline/logstash-lints.conf) | Return the package's path of field `sclint-linterId` |
 
-**:page_with_curl: *pipeline/logstash-\*.conf*** modify for each file : (Based from [schemacrawler-additional-command-lints-as-csv](<https://github.com/adriens/schemacrawler-additional-command-lints-as-csv>))
-
-```conf
-...
-output {
-   elasticsearch {
-     hosts => "<elasticSearch url>"
-     index => "schemacrawler-tables-stats"
-   }
-...
-```
-
-* Invoke and unleash the Logstash daemon
-
-```sh
-sh logstash-sa.sh
-```
+:bulb: Feel free to create PR or issues for any new ideas of calculateds fields !
 
 ### Let's analyze the database
 
@@ -172,7 +146,7 @@ The docker image [mbarre/schemacrawler-additional-lints](https://hub.docker.com/
 
 #### Create Index pattern
 
-* Go to http://localhost:5601
+* Go to <http://localhost:5601>
 
 * Reach the `Stack Management` via the side left menu
 
@@ -223,7 +197,7 @@ Following tools are installed :
 
 ### No such host on pulling docker images
 
-Got this issue (personnally experimented on Windows 10 at home... And randomly hapenned)? Please see https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues
+Got this issue (personnally experimented on Windows 10 at home... And randomly hapenned)? Please see <https://docs.docker.com/docker-for-windows/troubleshoot/#networking-issues>
 
 ```bash
 Unable to find image 'hello-world:latest' locally
@@ -240,7 +214,6 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 * [Generate Database Diagrams With GitHub Actions Workflows](https://dev.to/sualeh/generate-database-diagrams-with-github-actions-workflows-4l96)
 * [SchemaCrawler tutorials on Katacoda.](https://www.katacoda.com/schemacrawler)
 
-
 ## :link: Usefuls links
 
 * [Dashboard demo](https://hakumennc.github.io/docker-schemacrawler-reporting/)
@@ -248,5 +221,5 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 * [mbarre/schemacrawler-additional-lints](https://github.com/mbarre/schemacrawler-additional-lints)
 * [adriens/schemacrawler-additional-command-lints-as-csv](https://github.com/adriens/schemacrawler-additional-command-lints-as-csv)
 * [SchemaCrawler - Free database schema discovery and comprehension tool](https://www.schemacrawler.com/)
-  * [github repository](https://github.com/schemacrawler/SchemaCrawler)
+  * [schemacrawler/SchemaCrawler](https://github.com/schemacrawler/SchemaCrawler)
 * [Introduction to Vagrant](https://www.vagrantup.com/intro/index)
