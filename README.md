@@ -223,3 +223,7 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 * [SchemaCrawler - Free database schema discovery and comprehension tool](https://www.schemacrawler.com/)
   * [schemacrawler/SchemaCrawler](https://github.com/schemacrawler/SchemaCrawler)
 * [Introduction to Vagrant](https://www.vagrantup.com/intro/index)
+
+## Resources
+
+* Some "ready-to-use" dashboards example [dashboards.ndjson](dashboards.ndjson)
