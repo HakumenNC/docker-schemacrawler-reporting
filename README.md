@@ -35,6 +35,8 @@ Some [Kibana Dashboards visuals](https://hakumennc.github.io/docker-schemacrawle
 
 <img src="img/dashboard-lints.PNG" alt="lints" title="lints" height="100" /> <img src="img/dashboard-rgpd.PNG" alt="lints" title="RGPD" height="100" /> <img src="img/dashboard.png" alt="dashboard" title="dashboard" height="100" />
 
+Also you can get a [full but (yet short)](https://youtu.be/5B5mGAeaHwA) video that explains the motivation and philosophy behind this ecosystem.
+
 ## :speech_balloon: Description
 
 * Use [schemacrawler](https://www.schemacrawler.com) on docker :whale: environment.
