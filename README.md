@@ -218,6 +218,7 @@ And if it is not enough, set as DNS Server `8.8.8.8` on your Windows' network ca
 
 ## :link: Usefuls links
 
+* [Meetup with Elastic.fr](https://twitter.com/ElasticFR/status/1367518952759324672)
 * [Dashboard demo](https://hakumennc.github.io/docker-schemacrawler-reporting/)
 * [What is ELK Stack ?](https://www.elastic.co/what-is/elk-stack)
 * [mbarre/schemacrawler-additional-lints](https://github.com/mbarre/schemacrawler-additional-lints)
